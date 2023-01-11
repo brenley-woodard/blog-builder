@@ -10,14 +10,15 @@ export default function Home() {
   const [subtitle, setSubtitle] = useState('');
   const [font, setFont] = useState('titillium');
   const [align, setAlign] = useState('center');
+  const [text, setText] = useState('');
   
   // add useState calls here for title, subtitle, font, align, and text
 
   return (
     <main>
       {/* pass the state variables as props to the presentational components */}
-      <Preview {...{ title, subtitle, font, align }}/>
-      <Editor {...{ setTitle, setSubtitle, setFont, setAlign }}/>
+      <Preview {...{ title, subtitle, font, align, text }}/>
+      <Editor {...{ setTitle, setSubtitle, setFont, setAlign, setText }}/>
     </main>
   );
 }
